@@ -67,7 +67,7 @@ public class Main {
 				return -1;
 			}
 			
-			count = Math.max(count, dfs(nx, ny));
+			count = Math.max(count, hop);
 		}
 		
 		visited[x][y] = false;
