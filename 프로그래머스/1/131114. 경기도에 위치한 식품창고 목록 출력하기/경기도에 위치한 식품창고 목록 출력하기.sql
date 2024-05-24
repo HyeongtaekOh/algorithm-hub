@@ -1,0 +1,10 @@
+-- 코드를 입력하세요
+SELECT WAREHOUSE_ID, WAREHOUSE_NAME, ADDRESS, 
+# CASE
+# WHEN FREEZER_YN is NULL THEN 'N'
+# ELSE FREEZER_YN
+# END as FREEZER_YN
+ifnull(FREEZER_YN, 'N') as FREEZER_YN
+FROM food_warehouse
+WHERE substring(ADDRESS, 1, 3) = '경기도'
+ORDER by warehouse_id
